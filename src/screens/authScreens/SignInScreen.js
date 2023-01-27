@@ -6,6 +6,7 @@ import { colors, parameters, title } from "../../global/styles";
 import * as Animatable from 'react-native-animatable'
 import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
 import { auth } from '../../../firebaseConfig'
+import { useNavigation } from "@react-navigation/native";
 
 
 function criarConta(){
@@ -24,6 +25,7 @@ export default function SignInScreen(){
     const [textInput2Fossued, setTextInput2Fossued] = useState(false)
     const textInput1 = useRef(1)
     const textInput2 = useRef(2)
+    const navigation = useNavigation()
 
     return(
         <View style={styles.cont}> 
@@ -53,7 +55,10 @@ export default function SignInScreen(){
                     </View>
             </View>
             <View style={{marginHorizontal:20, marginVertical:30}}> 
-                <Button title={'ACESSAR'} buttonStyle={parameters.buttonStyle} titleStyle={parameters.buttonTitleStyle} />
+                <Button title={'ACESSAR'} 
+                buttonStyle={parameters.buttonStyle} 
+                titleStyle={parameters.buttonTitleStyle}
+                onPress={()=>navigation.navigate('HomeScreen')} />
             </View>
             <View style={{alignItems:'center'}}>
                 <Text style={{...styles.text1, textDecorationLine:'underline'}}>Esqueceu a senha?</Text>

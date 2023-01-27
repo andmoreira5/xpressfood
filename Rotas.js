@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SignInWelcomeScreen from './src/screens/authScreens/SigInWelcomeScreen';
 import SignInScreen from './src/screens/authScreens/SignInScreen';
+import HomeScreen from './src/screens/HomeScreen';
 
 
 const AppStack = createStackNavigator();
@@ -17,6 +18,7 @@ const Rotas = () => {
             }}>
                 <AppStack.Screen name="SigInWelcomeScreen" component={SignInWelcomeScreen} />
                 <AppStack.Screen name="SigInScreen" component={SignInScreen} />
+                <AppStack.Screen name="HomeScreen" component={HomeScreen} />
                 
                 
             </AppStack.Navigator>

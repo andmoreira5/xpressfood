@@ -1,9 +1,13 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import {View, Text, StyleSheet, Dimensions} from 'react-native'
 import { Icon } from "react-native-elements";
 import { colors, parameters } from "../global/styles";
 
 export default function Header({title, type}){
+
+    const navigation = useNavigation()
+
     return (
         <View style={styles.header}>
             <View style={{marginLeft:20}}>
@@ -12,7 +16,7 @@ export default function Header({title, type}){
                     name = {type}
                     color = {colors.cardbackground}
                     size = {28}
-                    onPress = {()=>{}}
+                    onPress = {()=>{navigation.goBack()}}
                 />
             </View>
             <View>
