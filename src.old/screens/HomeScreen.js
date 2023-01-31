@@ -9,6 +9,7 @@ import { Icon } from "react-native-elements";
 import HomeHeader from "../components/HomeHeader";
 import { filterData } from "../global/Data";
 import { colors } from "../global/styles";
+import TitulosHome from "./TitulosHome";
 
 export default function HomeScreen(){
 
@@ -56,9 +57,7 @@ export default function HomeScreen(){
                         </View>
                 </View>
 
-                <View style={styles.headerTextView}>
-                    <Text style={styles.headerText}>Categorias</Text>
-                </View>
+                <TitulosHome title='Categorias' />
 
                 <View>
                     <FlatList 
@@ -82,6 +81,8 @@ export default function HomeScreen(){
                             )}
                     />
                 </View>
+
+                <TitulosHome title='Free Delivery Now' />
 
             </ScrollView>
 
@@ -118,16 +119,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:5,
         marginRight:20
     },
-    headerText:{
-        color:colors.grey2,
-        fontSize:22,
-        fontWeight:'bold',
-        paddingLeft:20
-    },
-    headerTextView:{
-        backgroundColor:colors.grey5,
-        paddingVertical:3
-    },
+    
     smallCard:{
         borderRadius:30,
         backgroundColor:colors.grey5,

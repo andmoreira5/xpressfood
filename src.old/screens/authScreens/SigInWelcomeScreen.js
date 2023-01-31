@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { Button } from "react-native-elements";
 import { color } from "react-native-elements/dist/helpers";
@@ -9,6 +9,11 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function SignInWelcomeScreen(){
     const navigation = useNavigation();
+
+    useEffect(( ) => {
+        
+    }, [])
+
     return(
         <View style={{flex:1}}>
             <View style={{flex:3, justifyContent:'flex-start', alignItems:'center', marginTop:20, paddingTop:20}}>
